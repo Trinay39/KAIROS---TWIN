@@ -1,0 +1,354 @@
+{
+  "feature_contract": {
+    "expected_feature_count": 46,
+    "actual_feature_count": 46,
+    "order_matches_contract": true
+  },
+  "old_constants": [
+    "X_attendance_trend_7d",
+    "X_grades_below_personal_mean_pct",
+    "X_active_subjects_count",
+    "X_break_rate_7d",
+    "X_distraction_rate_7d",
+    "X_focus_quality_7d_avg",
+    "X_procrastination_index_7d",
+    "X_recovery_score_7d",
+    "X_pending_assignment_effort_hours",
+    "X_submission_rate_14d",
+    "X_submissions_on_time_pct_14d",
+    "X_effort_study_gap_7d",
+    "X_interaction_trend_7d",
+    "X_interaction_engagement_score",
+    "X_avg_confidence_7d",
+    "X_is_exam_period",
+    "X_recovery_confidence_coupling"
+  ],
+  "new_constants": [
+    "X_active_subjects_count",
+    "X_avg_session_duration_7d",
+    "X_break_rate_7d",
+    "X_distraction_rate_7d",
+    "X_focus_quality_7d_avg",
+    "X_procrastination_index_7d",
+    "X_pending_assignment_effort_hours",
+    "X_effort_study_gap_7d",
+    "X_avg_confidence_7d",
+    "X_is_exam_period",
+    "X_recovery_confidence_coupling"
+  ],
+  "resolved_previous_constants": [
+    "X_attendance_trend_7d",
+    "X_grades_below_personal_mean_pct",
+    "X_recovery_score_7d",
+    "X_submission_rate_14d",
+    "X_submissions_on_time_pct_14d",
+    "X_interaction_trend_7d",
+    "X_interaction_engagement_score"
+  ],
+  "still_constant_previous_features": [
+    "X_active_subjects_count",
+    "X_break_rate_7d",
+    "X_distraction_rate_7d",
+    "X_focus_quality_7d_avg",
+    "X_procrastination_index_7d",
+    "X_pending_assignment_effort_hours",
+    "X_effort_study_gap_7d",
+    "X_avg_confidence_7d",
+    "X_is_exam_period",
+    "X_recovery_confidence_coupling"
+  ],
+  "previous_constant_status": {
+    "X_attendance_trend_7d": {
+      "old_constant": true,
+      "new_constant": false,
+      "old_unique_count": 1,
+      "new_unique_count": 13408,
+      "new_min": -0.10854262066247279,
+      "new_max": 0.06101733435196526,
+      "new_mean": -9.579140558482276e-05,
+      "reason_if_still_constant": null
+    },
+    "X_grades_below_personal_mean_pct": {
+      "old_constant": true,
+      "new_constant": false,
+      "old_unique_count": 1,
+      "new_unique_count": 6,
+      "new_min": 0.0,
+      "new_max": 1.0,
+      "new_mean": 0.617883929221583,
+      "reason_if_still_constant": null
+    },
+    "X_active_subjects_count": {
+      "old_constant": true,
+      "new_constant": true,
+      "old_unique_count": 1,
+      "new_unique_count": 1,
+      "new_min": 4.0,
+      "new_max": 4.0,
+      "new_mean": 4.0,
+      "reason_if_still_constant": "Raw CSV has no subject/course identifier; ML adapter preserves legacy value 4."
+    },
+    "X_break_rate_7d": {
+      "old_constant": true,
+      "new_constant": true,
+      "old_unique_count": 1,
+      "new_unique_count": 1,
+      "new_min": 0.05,
+      "new_max": 0.05,
+      "new_mean": 0.05000000000000001,
+      "reason_if_still_constant": "Raw CSV has no break-event column."
+    },
+    "X_distraction_rate_7d": {
+      "old_constant": true,
+      "new_constant": true,
+      "old_unique_count": 1,
+      "new_unique_count": 1,
+      "new_min": 0.1,
+      "new_max": 0.1,
+      "new_mean": 0.10000000000000002,
+      "reason_if_still_constant": "Raw CSV has no distraction-event column."
+    },
+    "X_focus_quality_7d_avg": {
+      "old_constant": true,
+      "new_constant": true,
+      "old_unique_count": 1,
+      "new_unique_count": 1,
+      "new_min": 3.0,
+      "new_max": 3.0,
+      "new_mean": 3.0,
+      "reason_if_still_constant": "Raw CSV has no focus-quality column."
+    },
+    "X_procrastination_index_7d": {
+      "old_constant": true,
+      "new_constant": true,
+      "old_unique_count": 1,
+      "new_unique_count": 1,
+      "new_min": 0.3,
+      "new_max": 0.3,
+      "new_mean": 0.3,
+      "reason_if_still_constant": "Raw CSV has no submission-timing column."
+    },
+    "X_recovery_score_7d": {
+      "old_constant": true,
+      "new_constant": false,
+      "old_unique_count": 1,
+      "new_unique_count": 13433,
+      "new_min": 0.6103538447827122,
+      "new_max": 0.9641677043786873,
+      "new_mean": 0.719303984543,
+      "reason_if_still_constant": null
+    },
+    "X_pending_assignment_effort_hours": {
+      "old_constant": true,
+      "new_constant": true,
+      "old_unique_count": 1,
+      "new_unique_count": 1,
+      "new_min": 10.0,
+      "new_max": 10.0,
+      "new_mean": 10.0,
+      "reason_if_still_constant": "Raw CSV has no assignment-effort-hours column."
+    },
+    "X_submission_rate_14d": {
+      "old_constant": true,
+      "new_constant": false,
+      "old_unique_count": 1,
+      "new_unique_count": 10,
+      "new_min": 0.0,
+      "new_max": 1.0,
+      "new_mean": 0.17293502269472563,
+      "reason_if_still_constant": null
+    },
+    "X_submissions_on_time_pct_14d": {
+      "old_constant": true,
+      "new_constant": false,
+      "old_unique_count": 1,
+      "new_unique_count": 10,
+      "new_min": 0.0,
+      "new_max": 1.0,
+      "new_mean": 0.1652091070171606,
+      "reason_if_still_constant": null
+    },
+    "X_effort_study_gap_7d": {
+      "old_constant": true,
+      "new_constant": true,
+      "old_unique_count": 1,
+      "new_unique_count": 1,
+      "new_min": 0.0,
+      "new_max": 0.0,
+      "new_mean": 0.0,
+      "reason_if_still_constant": "Raw CSV has no assignment-effort-hours column."
+    },
+    "X_interaction_trend_7d": {
+      "old_constant": true,
+      "new_constant": false,
+      "old_unique_count": 1,
+      "new_unique_count": 13434,
+      "new_min": -2.9775736407648896,
+      "new_max": 5.190298434534459,
+      "new_mean": -0.00625443307277521,
+      "reason_if_still_constant": null
+    },
+    "X_interaction_engagement_score": {
+      "old_constant": true,
+      "new_constant": false,
+      "old_unique_count": 1,
+      "new_unique_count": 13401,
+      "new_min": 0.10392687069461454,
+      "new_max": 0.9942894965507926,
+      "new_mean": 0.5627522790448592,
+      "reason_if_still_constant": null
+    },
+    "X_avg_confidence_7d": {
+      "old_constant": true,
+      "new_constant": true,
+      "old_unique_count": 1,
+      "new_unique_count": 1,
+      "new_min": 3.0,
+      "new_max": 3.0,
+      "new_mean": 3.0,
+      "reason_if_still_constant": "Raw CSV has no confidence column."
+    },
+    "X_is_exam_period": {
+      "old_constant": true,
+      "new_constant": true,
+      "old_unique_count": 1,
+      "new_unique_count": 1,
+      "new_min": 0.0,
+      "new_max": 0.0,
+      "new_mean": 0.0,
+      "reason_if_still_constant": "Prediction days stop at day 83; exam period begins at day 85."
+    },
+    "X_recovery_confidence_coupling": {
+      "old_constant": true,
+      "new_constant": true,
+      "old_unique_count": 1,
+      "new_unique_count": 1,
+      "new_min": 0.0,
+      "new_max": 0.0,
+      "new_mean": 0.0,
+      "reason_if_still_constant": "Confidence is unavailable, so this interaction remains neutral."
+    }
+  },
+  "stress_distribution": {
+    "old_X_avg_stress_7d": {
+      "count": 13733,
+      "missing_count": 0,
+      "min": 1.563679509676553,
+      "max": 5.0,
+      "mean": 4.37613551642805,
+      "std": 0.7277351589866343,
+      "p25": 3.90701236360606,
+      "p50": 4.71846640609399,
+      "p75": 4.974230458096248
+    },
+    "new_X_avg_stress_7d": {
+      "count": 13733,
+      "missing_count": 0,
+      "min": 1.563679509676553,
+      "max": 5.0,
+      "mean": 4.37613551642805,
+      "std": 0.7277351589866343,
+      "p25": 3.9070123636060603,
+      "p50": 4.71846640609399,
+      "p75": 4.9742304580962475
+    }
+  },
+  "label_distribution": {
+    "old": {
+      "train": {
+        "samples": 8167,
+        "positive_count": 3925,
+        "negative_count": 4242,
+        "positive_rate": 0.48059262887229093
+      },
+      "val": {
+        "samples": 2790,
+        "positive_count": 1342,
+        "negative_count": 1448,
+        "positive_rate": 0.48100358422939066
+      },
+      "test": {
+        "samples": 2776,
+        "positive_count": 1240,
+        "negative_count": 1536,
+        "positive_rate": 0.44668587896253603
+      },
+      "combined": {
+        "samples": 13733,
+        "positive_count": 6507,
+        "negative_count": 7226,
+        "positive_rate": 0.47382218015000366
+      }
+    },
+    "new": {
+      "train": {
+        "samples": 8167,
+        "positive_count": 3925,
+        "negative_count": 4242,
+        "positive_rate": 0.48059262887229093
+      },
+      "val": {
+        "samples": 2790,
+        "positive_count": 1342,
+        "negative_count": 1448,
+        "positive_rate": 0.48100358422939066
+      },
+      "test": {
+        "samples": 2776,
+        "positive_count": 1240,
+        "negative_count": 1536,
+        "positive_rate": 0.44668587896253603
+      },
+      "combined": {
+        "samples": 13733,
+        "positive_count": 6507,
+        "negative_count": 7226,
+        "positive_rate": 0.47382218015000366
+      }
+    }
+  },
+  "semantic_checks": {
+    "X_avg_stress_7d": {
+      "within_expected_bounds": true,
+      "min": 1.563679509676553,
+      "max": 5.0,
+      "unique_count": 10387
+    },
+    "X_recovery_score_7d": {
+      "within_expected_bounds": true,
+      "min": 0.6103538447827122,
+      "max": 0.9641677043786873,
+      "unique_count": 13433
+    },
+    "X_interaction_engagement_score": {
+      "within_expected_bounds": true,
+      "min": 0.10392687069461454,
+      "max": 0.9942894965507926,
+      "unique_count": 13401
+    },
+    "X_submission_rate_14d": {
+      "within_expected_bounds": true,
+      "min": 0.0,
+      "max": 1.0,
+      "unique_count": 10
+    },
+    "X_submissions_on_time_pct_14d": {
+      "within_expected_bounds": true,
+      "min": 0.0,
+      "max": 1.0,
+      "unique_count": 10
+    },
+    "X_grades_below_personal_mean_pct": {
+      "within_expected_bounds": true,
+      "min": 0.0,
+      "max": 1.0,
+      "unique_count": 6
+    },
+    "X_workload_pressure_score_7d": {
+      "within_expected_bounds": true,
+      "min": 0.0,
+      "max": 1.0,
+      "unique_count": 13161
+    }
+  }
+}

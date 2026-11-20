@@ -1,0 +1,1183 @@
+{
+  "experiment_version": "twin_integrity_fix_v1",
+  "baseline_version": "pre_twin_integrity_fix",
+  "created_at": "2026-09-12T11:31:05.973501",
+  "archive_dir": "experiments\\archive\\pre_twin_integrity_fix_20260912_112047",
+  "experiment_root": "experiments\\twin_integrity_fix",
+  "production_artifacts_modified": false,
+  "raw_data_modified": false,
+  "hard_leakage_passed": true,
+  "label_distribution_warning_passed": false,
+  "dataset_comparison": {
+    "feature_contract": {
+      "expected_feature_count": 46,
+      "actual_feature_count": 46,
+      "order_matches_contract": true
+    },
+    "old_constants": [
+      "X_attendance_trend_7d",
+      "X_grades_below_personal_mean_pct",
+      "X_active_subjects_count",
+      "X_break_rate_7d",
+      "X_distraction_rate_7d",
+      "X_focus_quality_7d_avg",
+      "X_procrastination_index_7d",
+      "X_recovery_score_7d",
+      "X_pending_assignment_effort_hours",
+      "X_submission_rate_14d",
+      "X_submissions_on_time_pct_14d",
+      "X_effort_study_gap_7d",
+      "X_interaction_trend_7d",
+      "X_interaction_engagement_score",
+      "X_avg_confidence_7d",
+      "X_is_exam_period",
+      "X_recovery_confidence_coupling"
+    ],
+    "new_constants": [
+      "X_active_subjects_count",
+      "X_avg_session_duration_7d",
+      "X_break_rate_7d",
+      "X_distraction_rate_7d",
+      "X_focus_quality_7d_avg",
+      "X_procrastination_index_7d",
+      "X_pending_assignment_effort_hours",
+      "X_effort_study_gap_7d",
+      "X_avg_confidence_7d",
+      "X_is_exam_period",
+      "X_recovery_confidence_coupling"
+    ],
+    "resolved_previous_constants": [
+      "X_attendance_trend_7d",
+      "X_grades_below_personal_mean_pct",
+      "X_recovery_score_7d",
+      "X_submission_rate_14d",
+      "X_submissions_on_time_pct_14d",
+      "X_interaction_trend_7d",
+      "X_interaction_engagement_score"
+    ],
+    "newly_constant_features": [
+      "X_avg_session_duration_7d"
+    ],
+    "still_constant_previous_features": [
+      "X_active_subjects_count",
+      "X_break_rate_7d",
+      "X_distraction_rate_7d",
+      "X_focus_quality_7d_avg",
+      "X_procrastination_index_7d",
+      "X_pending_assignment_effort_hours",
+      "X_effort_study_gap_7d",
+      "X_avg_confidence_7d",
+      "X_is_exam_period",
+      "X_recovery_confidence_coupling"
+    ],
+    "previous_constant_status": {
+      "X_attendance_trend_7d": {
+        "old_constant": true,
+        "new_constant": false,
+        "old_unique_count": 1,
+        "new_unique_count": 13408,
+        "new_min": -0.1085426206624727,
+        "new_max": 0.0610173343519652,
+        "new_mean": -9.57914055848226e-05,
+        "reason_if_still_constant": null
+      },
+      "X_grades_below_personal_mean_pct": {
+        "old_constant": true,
+        "new_constant": false,
+        "old_unique_count": 1,
+        "new_unique_count": 6,
+        "new_min": 0.0,
+        "new_max": 1.0,
+        "new_mean": 0.617883929221583,
+        "reason_if_still_constant": null
+      },
+      "X_active_subjects_count": {
+        "old_constant": true,
+        "new_constant": true,
+        "old_unique_count": 1,
+        "new_unique_count": 1,
+        "new_min": 4.0,
+        "new_max": 4.0,
+        "new_mean": 4.0,
+        "reason_if_still_constant": "Raw CSV has no subject/course identifier; ML adapter preserves legacy value 4."
+      },
+      "X_break_rate_7d": {
+        "old_constant": true,
+        "new_constant": true,
+        "old_unique_count": 1,
+        "new_unique_count": 1,
+        "new_min": 0.05,
+        "new_max": 0.05,
+        "new_mean": 0.05000000000000001,
+        "reason_if_still_constant": "Raw CSV has no break-event column."
+      },
+      "X_distraction_rate_7d": {
+        "old_constant": true,
+        "new_constant": true,
+        "old_unique_count": 1,
+        "new_unique_count": 1,
+        "new_min": 0.1,
+        "new_max": 0.1,
+        "new_mean": 0.10000000000000002,
+        "reason_if_still_constant": "Raw CSV has no distraction-event column."
+      },
+      "X_focus_quality_7d_avg": {
+        "old_constant": true,
+        "new_constant": true,
+        "old_unique_count": 1,
+        "new_unique_count": 1,
+        "new_min": 3.0,
+        "new_max": 3.0,
+        "new_mean": 3.0,
+        "reason_if_still_constant": "Raw CSV has no focus-quality column."
+      },
+      "X_procrastination_index_7d": {
+        "old_constant": true,
+        "new_constant": true,
+        "old_unique_count": 1,
+        "new_unique_count": 1,
+        "new_min": 0.3,
+        "new_max": 0.3,
+        "new_mean": 0.3,
+        "reason_if_still_constant": "Raw CSV has no submission-timing column."
+      },
+      "X_recovery_score_7d": {
+        "old_constant": true,
+        "new_constant": false,
+        "old_unique_count": 1,
+        "new_unique_count": 13433,
+        "new_min": 0.6103538447827122,
+        "new_max": 0.9641677043786872,
+        "new_mean": 0.719303984543,
+        "reason_if_still_constant": null
+      },
+      "X_pending_assignment_effort_hours": {
+        "old_constant": true,
+        "new_constant": true,
+        "old_unique_count": 1,
+        "new_unique_count": 1,
+        "new_min": 10.0,
+        "new_max": 10.0,
+        "new_mean": 10.0,
+        "reason_if_still_constant": "Raw CSV has no assignment-effort-hours column."
+      },
+      "X_submission_rate_14d": {
+        "old_constant": true,
+        "new_constant": false,
+        "old_unique_count": 1,
+        "new_unique_count": 10,
+        "new_min": 0.0,
+        "new_max": 1.0,
+        "new_mean": 0.17293502269472563,
+        "reason_if_still_constant": null
+      },
+      "X_submissions_on_time_pct_14d": {
+        "old_constant": true,
+        "new_constant": false,
+        "old_unique_count": 1,
+        "new_unique_count": 10,
+        "new_min": 0.0,
+        "new_max": 1.0,
+        "new_mean": 0.1652091070171606,
+        "reason_if_still_constant": null
+      },
+      "X_effort_study_gap_7d": {
+        "old_constant": true,
+        "new_constant": true,
+        "old_unique_count": 1,
+        "new_unique_count": 1,
+        "new_min": 0.0,
+        "new_max": 0.0,
+        "new_mean": 0.0,
+        "reason_if_still_constant": "Raw CSV has no assignment-effort-hours column."
+      },
+      "X_interaction_trend_7d": {
+        "old_constant": true,
+        "new_constant": false,
+        "old_unique_count": 1,
+        "new_unique_count": 13434,
+        "new_min": -2.9775736407648896,
+        "new_max": 5.190298434534459,
+        "new_mean": -0.00625443307277521,
+        "reason_if_still_constant": null
+      },
+      "X_interaction_engagement_score": {
+        "old_constant": true,
+        "new_constant": false,
+        "old_unique_count": 1,
+        "new_unique_count": 13401,
+        "new_min": 0.1039268706946145,
+        "new_max": 0.9942894965507926,
+        "new_mean": 0.5627522790448592,
+        "reason_if_still_constant": null
+      },
+      "X_avg_confidence_7d": {
+        "old_constant": true,
+        "new_constant": true,
+        "old_unique_count": 1,
+        "new_unique_count": 1,
+        "new_min": 3.0,
+        "new_max": 3.0,
+        "new_mean": 3.0,
+        "reason_if_still_constant": "Raw CSV has no confidence column."
+      },
+      "X_is_exam_period": {
+        "old_constant": true,
+        "new_constant": true,
+        "old_unique_count": 1,
+        "new_unique_count": 1,
+        "new_min": 0.0,
+        "new_max": 0.0,
+        "new_mean": 0.0,
+        "reason_if_still_constant": "Prediction days stop at day 83; exam period begins at day 85."
+      },
+      "X_recovery_confidence_coupling": {
+        "old_constant": true,
+        "new_constant": true,
+        "old_unique_count": 1,
+        "new_unique_count": 1,
+        "new_min": 0.0,
+        "new_max": 0.0,
+        "new_mean": 0.0,
+        "reason_if_still_constant": "Confidence is unavailable, so this interaction remains neutral."
+      }
+    },
+    "stress_distribution": {
+      "old_X_avg_stress_7d": {
+        "count": 13733,
+        "missing_count": 0,
+        "min": 1.563679509676553,
+        "max": 5.0,
+        "mean": 4.37613551642805,
+        "std": 0.7277351589866343,
+        "p25": 3.90701236360606,
+        "p50": 4.71846640609399,
+        "p75": 4.974230458096248
+      },
+      "new_X_avg_stress_7d": {
+        "count": 13733,
+        "missing_count": 0,
+        "min": 1.563679509676553,
+        "max": 5.0,
+        "mean": 4.37613551642805,
+        "std": 0.7277351589866343,
+        "p25": 3.90701236360606,
+        "p50": 4.71846640609399,
+        "p75": 4.974230458096248
+      }
+    },
+    "label_distribution": {
+      "old": {
+        "train": {
+          "samples": 8167,
+          "positive_count": 3925,
+          "negative_count": 4242,
+          "positive_rate": 0.48059262887229093
+        },
+        "val": {
+          "samples": 2790,
+          "positive_count": 1342,
+          "negative_count": 1448,
+          "positive_rate": 0.48100358422939066
+        },
+        "test": {
+          "samples": 2776,
+          "positive_count": 1240,
+          "negative_count": 1536,
+          "positive_rate": 0.44668587896253603
+        },
+        "combined": {
+          "samples": 13733,
+          "positive_count": 6507,
+          "negative_count": 7226,
+          "positive_rate": 0.47382218015000366
+        }
+      },
+      "new": {
+        "train": {
+          "samples": 8167,
+          "positive_count": 3925,
+          "negative_count": 4242,
+          "positive_rate": 0.48059262887229093
+        },
+        "val": {
+          "samples": 2790,
+          "positive_count": 1342,
+          "negative_count": 1448,
+          "positive_rate": 0.48100358422939066
+        },
+        "test": {
+          "samples": 2776,
+          "positive_count": 1240,
+          "negative_count": 1536,
+          "positive_rate": 0.44668587896253603
+        },
+        "combined": {
+          "samples": 13733,
+          "positive_count": 6507,
+          "negative_count": 7226,
+          "positive_rate": 0.47382218015000366
+        }
+      }
+    },
+    "semantic_checks": {
+      "X_avg_stress_7d": {
+        "within_expected_bounds": true,
+        "min": 1.563679509676553,
+        "max": 5.0,
+        "unique_count": 10385
+      },
+      "X_recovery_score_7d": {
+        "within_expected_bounds": true,
+        "min": 0.6103538447827122,
+        "max": 0.9641677043786872,
+        "unique_count": 13433
+      },
+      "X_interaction_engagement_score": {
+        "within_expected_bounds": true,
+        "min": 0.1039268706946145,
+        "max": 0.9942894965507926,
+        "unique_count": 13401
+      },
+      "X_submission_rate_14d": {
+        "within_expected_bounds": true,
+        "min": 0.0,
+        "max": 1.0,
+        "unique_count": 10
+      },
+      "X_submissions_on_time_pct_14d": {
+        "within_expected_bounds": true,
+        "min": 0.0,
+        "max": 1.0,
+        "unique_count": 10
+      },
+      "X_grades_below_personal_mean_pct": {
+        "within_expected_bounds": true,
+        "min": 0.0,
+        "max": 1.0,
+        "unique_count": 6
+      },
+      "X_workload_pressure_score_7d": {
+        "within_expected_bounds": true,
+        "min": 0.0,
+        "max": 1.0,
+        "unique_count": 13161
+      }
+    }
+  },
+  "model_metrics": {
+    "old": {
+      "logistic": {
+        "val": {
+          "roc_auc": 0.8754935117866465,
+          "pr_auc": 0.8675983216943346,
+          "accuracy": 0.7831541218637993,
+          "precision": 0.8157669237360754,
+          "recall": 0.7093889716840537,
+          "f1": 0.7588680749302511,
+          "brier_score": 0.14684664204439843,
+          "threshold": 0.5,
+          "confusion_matrix": {
+            "tn": 1233,
+            "fp": 215,
+            "fn": 390,
+            "tp": 952
+          },
+          "sample_count": 2790,
+          "positive_count": 1342,
+          "negative_count": 1448
+        },
+        "test": {
+          "roc_auc": 0.8911227318548387,
+          "pr_auc": 0.8573527787324354,
+          "accuracy": 0.8090778097982709,
+          "precision": 0.7553956834532374,
+          "recall": 0.8467741935483871,
+          "f1": 0.7984790874524715,
+          "brier_score": 0.13490450624318456,
+          "threshold": 0.39,
+          "confusion_matrix": {
+            "tn": 1196,
+            "fp": 340,
+            "fn": 190,
+            "tp": 1050
+          },
+          "sample_count": 2776,
+          "positive_count": 1240,
+          "negative_count": 1536
+        }
+      },
+      "rf": {
+        "val": {
+          "roc_auc": 0.8861433829280945,
+          "pr_auc": 0.8768488245455,
+          "accuracy": 0.792831541218638,
+          "precision": 0.8333333333333334,
+          "recall": 0.7116244411326379,
+          "f1": 0.7676848874598071,
+          "brier_score": 0.143925325587482,
+          "threshold": 0.5,
+          "confusion_matrix": {
+            "tn": 1257,
+            "fp": 191,
+            "fn": 387,
+            "tp": 955
+          },
+          "sample_count": 2790,
+          "positive_count": 1342,
+          "negative_count": 1448
+        },
+        "test": {
+          "roc_auc": 0.8996587281586022,
+          "pr_auc": 0.8760210401699895,
+          "accuracy": 0.8105187319884726,
+          "precision": 0.8204667863554758,
+          "recall": 0.7370967741935484,
+          "f1": 0.7765505522514868,
+          "brier_score": 0.13523068319102188,
+          "threshold": 0.5,
+          "confusion_matrix": {
+            "tn": 1336,
+            "fp": 200,
+            "fn": 326,
+            "tp": 914
+          },
+          "sample_count": 2776,
+          "positive_count": 1240,
+          "negative_count": 1536
+        }
+      },
+      "xgboost": {
+        "val": {
+          "roc_auc": 0.8937328634593374,
+          "pr_auc": 0.8857622651540259,
+          "accuracy": 0.7942652329749104,
+          "precision": 0.8321799307958477,
+          "recall": 0.7168405365126677,
+          "f1": 0.7702161729383507,
+          "brier_score": 0.13882813438457353,
+          "threshold": 0.5,
+          "confusion_matrix": {
+            "tn": 1254,
+            "fp": 194,
+            "fn": 380,
+            "tp": 962
+          },
+          "sample_count": 2790,
+          "positive_count": 1342,
+          "negative_count": 1448
+        },
+        "test": {
+          "roc_auc": 0.8999803112399195,
+          "pr_auc": 0.8693623491215611,
+          "accuracy": 0.8004322766570605,
+          "precision": 0.8279158699808795,
+          "recall": 0.6983870967741935,
+          "f1": 0.757655293088364,
+          "brier_score": 0.13441602954844634,
+          "threshold": 0.5,
+          "confusion_matrix": {
+            "tn": 1356,
+            "fp": 180,
+            "fn": 374,
+            "tp": 866
+          },
+          "sample_count": 2776,
+          "positive_count": 1240,
+          "negative_count": 1536
+        }
+      },
+      "production_metadata": {
+        "production_model_name": "rf",
+        "production_threshold": 0.5,
+        "production_threshold_source": "fixed_default_for_served_rf_model",
+        "optimal_threshold": 0.39,
+        "optimal_threshold_model": "logistic",
+        "calibrated": false
+      }
+    },
+    "new": {
+      "logistic": {
+        "val": {
+          "roc_auc": 0.8758295526590971,
+          "pr_auc": 0.868682631106893,
+          "accuracy": 0.7899641577060932,
+          "precision": 0.7536912751677852,
+          "recall": 0.8368107302533532,
+          "specificity": 0.7465469613259669,
+          "f1": 0.7930790960451978,
+          "brier_score": 0.14665208141254846,
+          "threshold": 0.38,
+          "confusion_matrix": {
+            "tn": 1081,
+            "fp": 367,
+            "fn": 219,
+            "tp": 1123
+          },
+          "sample_count": 2790,
+          "positive_count": 1342,
+          "negative_count": 1448,
+          "calibration": {
+            "ece": 0.05486195085888153,
+            "mce": 0.12484664486967811,
+            "brier": 0.14665208141254846
+          }
+        },
+        "test": {
+          "roc_auc": 0.8902601016465055,
+          "pr_auc": 0.8574377531502639,
+          "accuracy": 0.805835734870317,
+          "precision": 0.7466572836030964,
+          "recall": 0.8556451612903225,
+          "specificity": 0.765625,
+          "f1": 0.7974445697106352,
+          "brier_score": 0.13533287051497953,
+          "threshold": 0.38,
+          "confusion_matrix": {
+            "tn": 1176,
+            "fp": 360,
+            "fn": 179,
+            "tp": 1061
+          },
+          "sample_count": 2776,
+          "positive_count": 1240,
+          "negative_count": 1536,
+          "calibration": {
+            "ece": 0.04269960649168532,
+            "mce": 0.12823917218788194,
+            "brier": 0.13533287051497953
+          }
+        }
+      },
+      "rf": {
+        "val": {
+          "roc_auc": 0.8864614124214705,
+          "pr_auc": 0.8761733672515837,
+          "accuracy": 0.7971326164874551,
+          "precision": 0.7449494949494949,
+          "recall": 0.879284649776453,
+          "specificity": 0.7209944751381215,
+          "f1": 0.8065618591934381,
+          "brier_score": 0.1430475275976984,
+          "threshold": 0.35,
+          "confusion_matrix": {
+            "tn": 1044,
+            "fp": 404,
+            "fn": 162,
+            "tp": 1180
+          },
+          "sample_count": 2790,
+          "positive_count": 1342,
+          "negative_count": 1448,
+          "calibration": {
+            "ece": 0.0771533735449105,
+            "mce": 0.12618293808955772,
+            "brier": 0.1430475275976984
+          }
+        },
+        "test": {
+          "roc_auc": 0.9004347278225806,
+          "pr_auc": 0.8762816586593384,
+          "accuracy": 0.8072766570605188,
+          "precision": 0.728451069345431,
+          "recall": 0.9064516129032258,
+          "specificity": 0.7272135416666666,
+          "f1": 0.8077614085519224,
+          "brier_score": 0.13432578088223834,
+          "threshold": 0.35,
+          "confusion_matrix": {
+            "tn": 1117,
+            "fp": 419,
+            "fn": 116,
+            "tp": 1124
+          },
+          "sample_count": 2776,
+          "positive_count": 1240,
+          "negative_count": 1536,
+          "calibration": {
+            "ece": 0.09083223257432396,
+            "mce": 0.15412700594949325,
+            "brier": 0.13432578088223834
+          }
+        }
+      },
+      "xgboost": {
+        "val": {
+          "roc_auc": 0.8927213958715862,
+          "pr_auc": 0.8849521897565424,
+          "accuracy": 0.8118279569892473,
+          "precision": 0.7862648913805186,
+          "recall": 0.8360655737704918,
+          "specificity": 0.789364640883978,
+          "f1": 0.8104008667388949,
+          "brier_score": 0.1396204917361025,
+          "threshold": 0.36,
+          "confusion_matrix": {
+            "tn": 1143,
+            "fp": 305,
+            "fn": 220,
+            "tp": 1122
+          },
+          "sample_count": 2790,
+          "positive_count": 1342,
+          "negative_count": 1448,
+          "calibration": {
+            "ece": 0.07952381074695516,
+            "mce": 0.14982963672706057,
+            "brier": 0.1396204917361025
+          }
+        },
+        "test": {
+          "roc_auc": 0.9003194829469087,
+          "pr_auc": 0.8702923624534228,
+          "accuracy": 0.8285302593659942,
+          "precision": 0.7855007473841554,
+          "recall": 0.8475806451612903,
+          "specificity": 0.8131510416666666,
+          "f1": 0.8153607447633825,
+          "brier_score": 0.13421190352521423,
+          "threshold": 0.36,
+          "confusion_matrix": {
+            "tn": 1249,
+            "fp": 287,
+            "fn": 189,
+            "tp": 1051
+          },
+          "sample_count": 2776,
+          "positive_count": 1240,
+          "negative_count": 1536,
+          "calibration": {
+            "ece": 0.0909691113500056,
+            "mce": 0.18041664617018655,
+            "brier": 0.13421190352521423
+          }
+        }
+      }
+    }
+  },
+  "candidate_metadata": {
+    "experiment_version": "twin_integrity_fix_v1",
+    "baseline_version": "pre_twin_integrity_fix",
+    "timestamp": "2026-09-12T11:31:05.946916",
+    "random_state": 42,
+    "cv_strategy": "TimeSeriesSplit(n_splits=5)",
+    "model_selection": {
+      "selected_model_name": "xgboost",
+      "criterion": "highest_validation_roc_auc_then_pr_auc_then_f1",
+      "candidate_suitable": true,
+      "candidate_artifact": "experiments\\twin_integrity_fix\\results\\candidate_model_pipeline.pkl",
+      "candidate_only": true,
+      "promoted_to_production": false,
+      "final_production_decision": "rf_retained; candidate not promoted"
+    },
+    "thresholds": {
+      "logistic": {
+        "threshold": 0.38,
+        "source": "validation_f1_grid_0.10_0.90_step_0.01",
+        "validation_f1_at_threshold": 0.7930790960451978
+      },
+      "rf": {
+        "threshold": 0.35,
+        "source": "validation_f1_grid_0.10_0.90_step_0.01",
+        "validation_f1_at_threshold": 0.8065618591934381
+      },
+      "xgboost": {
+        "threshold": 0.36,
+        "source": "validation_f1_grid_0.10_0.90_step_0.01",
+        "validation_f1_at_threshold": 0.8104008667388949
+      }
+    },
+    "feature_count": 46,
+    "feature_names": [
+      "X_attendance_rate_7d",
+      "X_attendance_trend_7d",
+      "X_recent_grades_mean",
+      "X_grade_trend_30d",
+      "X_grades_below_personal_mean_pct",
+      "X_active_subjects_count",
+      "X_missed_deadlines_14d",
+      "X_avg_study_hours_3d",
+      "X_avg_study_hours_7d",
+      "X_study_variability_7d",
+      "X_study_consistency_score",
+      "X_avg_session_duration_7d",
+      "X_break_rate_7d",
+      "X_distraction_rate_7d",
+      "X_focus_quality_7d_avg",
+      "X_procrastination_index_7d",
+      "X_avg_sleep_hours_7d",
+      "X_sleep_variability_7d",
+      "X_sleep_deficit_7d_hours",
+      "X_sleep_debt_severity",
+      "X_rest_days_7d",
+      "X_recovery_ratio_7d",
+      "X_recovery_score_7d",
+      "X_recovery_deficit_score",
+      "X_pending_assignment_count",
+      "X_pending_assignment_effort_hours",
+      "X_deadline_density_trend_7d",
+      "X_workload_pressure_score_7d",
+      "X_submission_rate_14d",
+      "X_submissions_on_time_pct_14d",
+      "X_effort_study_gap_7d",
+      "X_platform_interactions_7d_avg",
+      "X_interaction_trend_7d",
+      "X_interaction_engagement_score",
+      "X_avg_stress_7d",
+      "X_avg_confidence_7d",
+      "X_week_of_semester",
+      "X_day_of_week_sine",
+      "X_day_of_week_cosine",
+      "X_is_midterm_period",
+      "X_is_exam_period",
+      "X_days_until_exam_period",
+      "X_workload_recovery_imbalance",
+      "X_deadline_urgency_effort_ratio",
+      "X_study_stress_coherence",
+      "X_recovery_confidence_coupling"
+    ],
+    "raw_feature_names": [
+      "attendance_rate_7d",
+      "attendance_trend_7d",
+      "recent_grades_mean",
+      "grade_trend_30d",
+      "grades_below_personal_mean_pct",
+      "active_subjects_count",
+      "missed_deadlines_14d",
+      "avg_study_hours_3d",
+      "avg_study_hours_7d",
+      "study_variability_7d",
+      "study_consistency_score",
+      "avg_session_duration_7d",
+      "break_rate_7d",
+      "distraction_rate_7d",
+      "focus_quality_7d_avg",
+      "procrastination_index_7d",
+      "avg_sleep_hours_7d",
+      "sleep_variability_7d",
+      "sleep_deficit_7d_hours",
+      "sleep_debt_severity",
+      "rest_days_7d",
+      "recovery_ratio_7d",
+      "recovery_score_7d",
+      "recovery_deficit_score",
+      "pending_assignment_count",
+      "pending_assignment_effort_hours",
+      "deadline_density_trend_7d",
+      "workload_pressure_score_7d",
+      "submission_rate_14d",
+      "submissions_on_time_pct_14d",
+      "effort_study_gap_7d",
+      "platform_interactions_7d_avg",
+      "interaction_trend_7d",
+      "interaction_engagement_score",
+      "avg_stress_7d",
+      "avg_confidence_7d",
+      "week_of_semester",
+      "day_of_week_sine",
+      "day_of_week_cosine",
+      "is_midterm_period",
+      "is_exam_period",
+      "days_until_exam_period",
+      "workload_recovery_imbalance",
+      "deadline_urgency_effort_ratio",
+      "study_stress_coherence",
+      "recovery_confidence_coupling"
+    ],
+    "hyperparams": {
+      "logistic": {
+        "C": 0.1
+      },
+      "rf": {
+        "n_estimators": 500,
+        "max_depth": 10,
+        "min_samples_leaf": 5,
+        "max_features": "sqrt"
+      },
+      "xgboost": {
+        "n_estimators": 100,
+        "max_depth": 3,
+        "learning_rate": 0.05,
+        "subsample": 0.8,
+        "colsample_bytree": 1.0
+      }
+    },
+    "cv_results": {
+      "logistic": {
+        "best_score": 0.8620038341706076,
+        "best_params": {
+          "C": 0.1
+        },
+        "cv_scores": [
+          0.8421439440555112,
+          0.8603073263179153,
+          0.8620038341706076,
+          0.8614089130664453,
+          0.8604841005995695,
+          0.8601350936355232
+        ]
+      },
+      "rf": {
+        "best_score": 0.8750396664641011,
+        "best_params": {
+          "n_estimators": 500,
+          "max_depth": 10,
+          "min_samples_leaf": 5,
+          "max_features": "sqrt"
+        },
+        "cv_scores": [
+          0.8707643133780835,
+          0.8722358268635908,
+          0.8703113676961548,
+          0.8717429269612695,
+          0.8738427109827859,
+          0.8740986975405667,
+          0.8694317944090144,
+          0.8703540715592684,
+          0.8694104204054327,
+          0.8711403714858712,
+          0.8727106901799827,
+          0.872657500800476,
+          0.8637343241400435,
+          0.8640425453462857,
+          0.8643806804118906,
+          0.8642219630219895,
+          0.8647351158968821,
+          0.8647760209166349,
+          0.8597914587228056,
+          0.8595012139428535,
+          0.859637323802016,
+          0.8594339875592374,
+          0.8596832743452534,
+          0.8595580934576799,
+          0.872985816181022,
+          0.8729971910771631,
+          0.8744193435803898,
+          0.8740583896205241,
+          0.8745816227396432,
+          0.8750396664641011,
+          0.8704382606549593,
+          0.8708510434412201,
+          0.86996379371195,
+          0.8711372681115677,
+          0.871848442611421,
+          0.8722934261321609,
+          0.8701105813449594,
+          0.8715796545946735,
+          0.8710277975083048,
+          0.8716800970830623,
+          0.8738150581647179,
+          0.8739977623275571,
+          0.8690002327278632,
+          0.8704878102653503,
+          0.8700917888227309,
+          0.8713512356974574,
+          0.8725760040719504,
+          0.8725518659011279
+        ]
+      },
+      "xgboost": {
+        "best_score": 0.8830010203810701,
+        "best_params": {
+          "n_estimators": 100,
+          "max_depth": 3,
+          "learning_rate": 0.05,
+          "subsample": 0.8,
+          "colsample_bytree": 1.0
+        },
+        "cv_scores": [
+          0.869196037129883,
+          0.866103356816601,
+          0.8798854502820287,
+          0.8785565986139494,
+          0.8823817223325726,
+          0.881965460702909,
+          0.8777959976958719,
+          0.8749389711591388,
+          0.8818815268142878,
+          0.8805258531251668,
+          0.8817478569098579,
+          0.8813494935267678,
+          0.8764332750406245,
+          0.8703468048089184,
+          0.8807289508043473,
+          0.8780498753624062,
+          0.8798837486332989,
+          0.8778555155720849,
+          0.8815695618493337,
+          0.8816054288648955,
+          0.8790486980703275,
+          0.8783689175681519,
+          0.8751550291765859,
+          0.8733687955696757,
+          0.8791169547907225,
+          0.8785552789487516,
+          0.8745510980525388,
+          0.8731618310616535,
+          0.8700262756774416,
+          0.8701987116239855,
+          0.8777223576477379,
+          0.8773151228761827,
+          0.8732165573270049,
+          0.8733237853436343,
+          0.8706565970520274,
+          0.8695446644339793,
+          0.8796544951327645,
+          0.880791356013171,
+          0.8717247043306606,
+          0.8703690003122381,
+          0.8652260939413953,
+          0.8669662836412633,
+          0.8757646656328898,
+          0.8758127297061511,
+          0.866971147756994,
+          0.8689059029803146,
+          0.862931143212166,
+          0.8666595987683712,
+          0.8728048350034922,
+          0.8751604404683804,
+          0.8676658757976838,
+          0.8696456797208398,
+          0.8650810058372611,
+          0.8676464154234953,
+          0.8682758256064785,
+          0.8657879515137035,
+          0.8805851330605435,
+          0.8792780482994363,
+          0.8822757020451977,
+          0.8819155140616521,
+          0.8766780177038009,
+          0.8741086690096159,
+          0.8819415670809405,
+          0.8786903515393745,
+          0.8816352575344499,
+          0.8794884508089666,
+          0.8747741990916614,
+          0.8673289310889162,
+          0.8807182287325604,
+          0.8758465157675381,
+          0.880776166599562,
+          0.8764708986197121,
+          0.8830010203810701,
+          0.8816980575974203,
+          0.879265958751791,
+          0.8767917745250473,
+          0.8754973592343696,
+          0.8727889736390203,
+          0.8804678160536742,
+          0.8783792257774401,
+          0.8741699159954311,
+          0.8723975879087492,
+          0.8698199391662793,
+          0.868879539786301,
+          0.8794226643050415,
+          0.8769774410828047,
+          0.8726576208574931,
+          0.8731239088566793,
+          0.869892407119778,
+          0.8700578750273392,
+          0.8798408979280437,
+          0.8789879018317615,
+          0.875047758466741,
+          0.8704666757073118,
+          0.8700901494725786,
+          0.8671528370970053,
+          0.8765016535110819,
+          0.8751763640184146,
+          0.8690588057008437,
+          0.8686798218543024,
+          0.8652467764951043,
+          0.8657061627707137,
+          0.8753882034889825,
+          0.8749795255656231,
+          0.8691717683091301,
+          0.8704611516782501,
+          0.8672033312842187,
+          0.8672802294313737
+        ]
+      }
+    },
+    "preprocessing": {
+      "imputer": "SimpleImputer(strategy=mean)",
+      "scaler": "StandardScaler",
+      "fit_scope": "train_split_only",
+      "scaler_mean": [
+        0.8739560219829051,
+        -8.719336636843357e-05,
+        0.6702869209502309,
+        -0.0009360410906666092,
+        0.6250765306031936,
+        4.0,
+        1.7677237663768826,
+        3.6580830819031753,
+        3.6626829599570043,
+        0.037737593863135924,
+        0.9811312031742991,
+        0.5,
+        0.05000000074505806,
+        0.10000000149011612,
+        3.0,
+        0.30000001192092896,
+        7.0849226287401805,
+        0.10126805566543777,
+        2.483792568057378,
+        0.17741375478567892,
+        0.07113995347128689,
+        2.4359411494237375,
+        0.7206444236571572,
+        0.17741375478567892,
+        7.0080813028039675,
+        10.0,
+        0.0013687487089993015,
+        0.30054054937620667,
+        0.15486306359495836,
+        0.1478470301243496,
+        0.0,
+        15.824672658104522,
+        -0.007069959784645325,
+        0.5646464518935411,
+        4.371728037582174,
+        3.0,
+        5.440308558834333,
+        0.01992132271957818,
+        -0.014816444514503353,
+        0.5127953961062813,
+        0.0,
+        49.99351046896045,
+        -35.42947139523678,
+        -0.0005991051891058943,
+        -0.3429320096497406,
+        0.0
+      ],
+      "scaler_scale": [
+        0.0203057924732325,
+        0.007588087687952157,
+        0.14500496411975744,
+        0.008183389108287734,
+        0.42425314879951787,
+        1.0,
+        1.2554459295563243,
+        1.4629972856490285,
+        1.461404691636002,
+        0.035496283399681944,
+        0.01774814184971861,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        1.0,
+        0.16988404696971685,
+        0.04218353467128689,
+        1.079293892061842,
+        0.07709242092633041,
+        0.6164620264276844,
+        1.6456330739674099,
+        0.06201620420693687,
+        0.07709242092633041,
+        3.0556141914011605,
+        1.0,
+        0.23490272032039075,
+        0.21350117963944687,
+        0.33636683105887627,
+        0.3209180746116539,
+        1.0,
+        2.60353521280404,
+        0.5212035263357339,
+        0.15798383013564216,
+        0.7196088501401747,
+        1.0,
+        1.681752280729003,
+        0.7047503031961441,
+        0.7090208828735665,
+        0.4998362510247565,
+        1.0,
+        11.825020407380983,
+        12.020362516089047,
+        0.10986034452019668,
+        0.17990221270142906,
+        1.0
+      ],
+      "scaler_var": [
+        0.0004123252079659857,
+        5.7579074760051115e-05,
+        0.02102643961937214,
+        6.696785729764231e-05,
+        0.17999073426630582,
+        0.0,
+        1.576144482039543,
+        2.140361057816425,
+        2.1357036727357177,
+        0.001259986135190536,
+        0.00031499653911773315,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.028860589414808957,
+        0.0017794505973636632,
+        1.1648753054419991,
+        0.005943241364282508,
+        0.38002543002732714,
+        2.7081082141354265,
+        0.003846009584236494,
+        0.005943241364282508,
+        9.336778086692169,
+        0.0,
+        0.05517928801391971,
+        0.045582753707435364,
+        0.11314264503659062,
+        0.10298841061245104,
+        0.0,
+        6.778395604310578,
+        0.27165311586480406,
+        0.024958890584327435,
+        0.5178368972000644,
+        0.0,
+        2.8282907337372034,
+        0.496672989855057,
+        0.5027106123508116,
+        0.2498362778384834,
+        0.0,
+        139.83110763497672,
+        144.48911501819862,
+        0.012069295298096307,
+        0.03236480613487022,
+        0.0
+      ]
+    },
+    "training_data": {
+      "train_path": "experiments\\twin_integrity_fix\\data_phase3\\train.csv",
+      "val_path": "experiments\\twin_integrity_fix\\data_phase3\\val.csv",
+      "test_path": "experiments\\twin_integrity_fix\\data_phase3\\test.csv"
+    }
+  },
+  "final_production_decision": {
+    "decision_date": "2026-09-12",
+    "production_model": "Random Forest",
+    "production_model_name": "rf",
+    "production_artifact": "experiments\\results\\model_pipeline.pkl",
+    "production_artifact_sha256": "3BAA73C949FAB3191EBE6F39F081C504F6E3B82ADAC0AA9EAB388CFEEB50AC36",
+    "production_artifact_matches_archive": true,
+    "archived_baseline_artifact": "experiments\\archive\\pre_twin_integrity_fix_20260912_112047\\results\\model_pipeline.pkl",
+    "xgboost_status": "benchmark_candidate_only_not_promoted",
+    "xgboost_candidate_artifact": "experiments/twin_integrity_fix/results/candidate_model_pipeline.pkl",
+    "rf_remains_production_serving_model": true,
+    "xgboost_promoted": false,
+    "production_threshold": 0.5,
+    "production_threshold_source": "fixed_default_for_served_rf_model",
+    "calibrated": false,
+    "calibration_method": null,
+    "feature_count": 46,
+    "feature_contract": "authoritative 46-feature contract from ml/feature_contract.py",
+    "preprocessing": {
+      "imputer": "SimpleImputer(strategy=mean)",
+      "scaler": "StandardScaler",
+      "fit_scope": "train_split_only"
+    },
+    "hard_leakage_passed": true,
+    "production_serving_smoke_test": "10 passed",
+    "full_backend_tests": "150 passed, 1 warning",
+    "rationale": "RF is retained because benchmark performance is effectively tied with XGBoost while the RF serving path is already integrated, tested, and more defensible for the frozen project foundation."
+  }
+}

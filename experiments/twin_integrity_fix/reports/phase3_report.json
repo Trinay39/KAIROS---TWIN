@@ -1,0 +1,85 @@
+{
+  "phase": "Phase 3",
+  "timestamp": "2026-09-12T11:29:00.912237",
+  "samples": {
+    "train": 8167,
+    "val": 2790,
+    "test": 2776,
+    "total": 13733
+  },
+  "labels": {
+    "base_rate": 0.47382218015000366,
+    "base_rate_pct": 47.38221801500037,
+    "overload_count": 6507,
+    "not_overload_count": 7226
+  },
+  "criteria": {
+    "C1_missed_deadline": 8125,
+    "C2_grade_deterioration": 17,
+    "C3_study_collapse": 15,
+    "C4_recovery_failure": 0,
+    "C5_high_stress": 10032
+  },
+  "features": {
+    "count": 46,
+    "names": [
+      "active_subjects_count",
+      "attendance_rate_7d",
+      "attendance_trend_7d",
+      "avg_confidence_7d",
+      "avg_session_duration_7d",
+      "avg_sleep_hours_7d",
+      "avg_stress_7d",
+      "avg_study_hours_3d",
+      "avg_study_hours_7d",
+      "break_rate_7d",
+      "day_of_week_cosine",
+      "day_of_week_sine",
+      "days_until_exam_period",
+      "deadline_density_trend_7d",
+      "deadline_urgency_effort_ratio",
+      "distraction_rate_7d",
+      "effort_study_gap_7d",
+      "focus_quality_7d_avg",
+      "grade_trend_30d",
+      "grades_below_personal_mean_pct",
+      "interaction_engagement_score",
+      "interaction_trend_7d",
+      "is_exam_period",
+      "is_midterm_period",
+      "missed_deadlines_14d",
+      "pending_assignment_count",
+      "pending_assignment_effort_hours",
+      "platform_interactions_7d_avg",
+      "procrastination_index_7d",
+      "recent_grades_mean",
+      "recovery_confidence_coupling",
+      "recovery_deficit_score",
+      "recovery_ratio_7d",
+      "recovery_score_7d",
+      "rest_days_7d",
+      "sleep_debt_severity",
+      "sleep_deficit_7d_hours",
+      "sleep_variability_7d",
+      "study_consistency_score",
+      "study_stress_coherence",
+      "study_variability_7d",
+      "submission_rate_14d",
+      "submissions_on_time_pct_14d",
+      "week_of_semester",
+      "workload_pressure_score_7d",
+      "workload_recovery_imbalance"
+    ]
+  },
+  "leakage_tests": {
+    "all_passed": false,
+    "tests": {
+      "feature_temporal_bounds": true,
+      "no_label_in_features": true,
+      "samples_temporal_separation": true,
+      "no_student_leakage_temporal": true,
+      "no_student_leakage_student_split": false,
+      "label_distribution": false
+    }
+  }
+}

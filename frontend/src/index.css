@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #121317;
+  --bg-secondary: #16181f;
+  --bg-card: #181921;
+  --bg-elevated: #1a1b22;
+  --border: rgba(255,255,255,0.08);
+  --text-primary: #f3f4f6;
+  --text-secondary: #a0a3b0;
+  --text-muted: #6b7280;
+  --accent: #00bfa5;
+  --accent-secondary: #7c6cf5;
+  --accent-warn: #f0a500;
+  --danger: #e0606e;
+  --success: #4ade80;
+}
+
+html { background: var(--bg-primary); color: var(--text-primary); -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg-primary); color: var(--text-primary); min-height: 100vh; }
+::selection { background: rgba(0,191,165,0.18); color: #fff; }
+
+.font-display { font-family: 'Inter', system-ui, sans-serif; }
+.font-mono { font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace; }
+
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.12); border-radius: 10px; }
+::-webkit-scrollbar-thumb:hover { background: rgba(255,255,255,0.22); }
+
+/* KAIROS-TWIN Design System — extra tokens */
+.card { background: #181921; border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; }
+.card-sm { background: #1a1b22; border: 1px solid rgba(255,255,255,0.06); border-radius: 12px; }
+.glass { background: rgba(22,24,31,0.85); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.06); }
+.glow-cyan { box-shadow: 0 0 24px rgba(0,191,165,0.08); }
+.text-balance { text-wrap: balance; }
+
+/* Animations */
+@keyframes fadeUp { from { opacity:0; transform: translateY(8px);} to { opacity:1; transform: none;} }
+.animate-fade-up { animation: fadeUp 0.35s ease-out both; }
+
+/* Focus ring */
+:focus-visible { outline: 2px solid rgba(0,191,165,0.5); outline-offset: 2px; }

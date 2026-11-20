@@ -1,0 +1,44 @@
+# Secrets and local environment files
+.env
+.env.*
+!.env.example
+frontend/.env
+frontend/.env.local
+frontend/.env.*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyd
+.Python
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg-info/
+
+# Frontend dependencies and generated builds
+frontend/node_modules/
+frontend/dist/
+dist-frontend/
+frontend/.vite/
+
+# Local application state and logs
+data/phase7/*.json
+data/phase7/*.jsonl
+test_registry.json
+test_outcomes.json
+*.log
+
+# Generated/archived experiment copies; keep the canonical production model
+experiments/archive/
+experiments/twin_integrity_fix/data_phase3/
+experiments/twin_integrity_fix/results/*.pkl
+
+# Editor and operating-system files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
